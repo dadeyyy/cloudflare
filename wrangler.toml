@@ -22,8 +22,11 @@ enabled = true
 # - https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 # Note: Use secrets to store sensitive data.
 # - https://developers.cloudflare.com/workers/configuration/secrets/
-# [vars]
-# MY_VARIABLE = "production_value"
+
+[vars]
+REFRESH_TOKEN_SECRET="thisIsaRefreshTokenSecret"
+ACCESS_TOKEN_SECRET="thisIsaAccessTokenSecret"
+
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#workers-ai
@@ -112,3 +115,12 @@ enabled = true
 # [[vectorize]]
 # binding = "MY_INDEX"
 # index_name = "my-index"
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "uploadDB"
+database_id = "f0aeb8a0-351f-4365-85b8-27917a6ba1c5"
+
+[[kv_namespaces]]
+binding = "kvCloudflare"
+id = "c9da92ec5e564bb18e06583b16d69a9c"

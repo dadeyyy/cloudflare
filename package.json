@@ -12,8 +12,17 @@
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.5.2",
     "@cloudflare/workers-types": "^4.20241004.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.7.5",
     "typescript": "^5.5.2",
     "vitest": "2.0.5",
-    "wrangler": "^3.60.3"
+    "wrangler": "^3.80.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "hono": "^4.6.3",
+    "jsonwebtoken": "^9.0.2",
+    "mapbox": "^1.0.0-beta10"
   }
 }
